@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Donny's portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/normalize.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/project.css" />
+    <!-- <script src="main.js"></script> -->
+
+</head>
+
+<body>
+    <header>
+        <div class="header-con">
+            <div class="header-logo-con">
+                <a class="logo" href="index.html">Donny Wu</a>
+            </div>
+            <nav class="header-nav-con">
+                <a class="nav" href="index.html#projects">projects</a>
+                <a class="nav" href="index.html#contact">contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="photo-background">
+        <img src="img/interactiveart-sitting.jpg" class="top-photo">
+        <div class="head-text-con">
+            <div class="head-text">
+                <h1>interactive art project</h1>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="main-content">
+        <section class="content">
+            <h2 class="flex-full section-title">introduction</h2>
+
+            <div class="flex-2third side-padding">
+                <figure>
+                    <img src="img/interactiveart-setup.jpg">
+                </figure>
+            </div>
+            <div class="flex-1third">
+                <p class="side-padding">This project took place during spring 2018 IAT 222 project where the final
+                    project was an interactive art project in groups of 4. During the 2 months given for this project,
+                    we created a unique art piece that was displayed at the SIAT's interactive art festival at the end
+                    of the semester. The artwork consists of a headpiece which uses a uses the surface book’s tablet
+                    portion to display a video plus sound effects as well as hosting a server, and several
+                    sub-components that are connected to the server that controls and governs the audiovisual
+                    experience.</p>
+            </div>
+
+            <h2 class="flex-full section-title">tools used</h2>
+
+            <div class="flex-2third side-padding">
+                <figure>
+                    <img src="img/interactiveart-code.png">
+                </figure>
+            </div>
+            <div class="flex-1third side-padding">
+                <h3>Node.js + Socket.io + Express</h3>
+                <ul>
+                    <li>Used as the backend of the interactive project.</li>
+                    <li>Auto connects and configures for the different setups we might be using during the final
+                        showcase.</li>
+                    <li>Connects 3 separate clients while streaming video and syncing between them.</li>
+                </ul>
+                <h3>JavaScript + Socket.io + Pixi.js</h3>
+                <ul>
+                    <li>Used as client side interface and graphics.</li>
+                    <li>Pixi.js used to draw the visualization and used as an overlay for the multi-cam video selector
+                        setup.</li>
+                    <li>Socket.io communicates and get updates from the server in real time.</li>
+                </ul>
+            </div>
+
+
+            <h2 class="flex-full section-title">designing the system</h2>
+
+            <div class="flex-2third side-padding">
+                <figure>
+                    <img src="img/interactiveart-diagram.png">
+                </figure>
+            </div>
+            <div class="flex-1third">
+                <p class="side-padding">When I was designing the system, I know that there needed to be several
+                    interaction points modes. Where these programs will run are unknown, and how they are going to run
+                    are unknown as well. I would need a video player and graphics in the same interface, and everything
+                    all with a real-time connection. This is why I chose the web. Because I know it can play videos
+                    with the HTML5 video player, draw graphics, and communicate with servers. When choosing which
+                    computer will be the central server, I’ve chosen the one with playing the highest quality video
+                    (3000x2000 30fps) because this will all have to be streamed over wifi and handling over LocalHost
+                    will be way better.</p>
+            </div>
+            <div class="flex-1third">
+                <p class="side-padding">This server uses the hub-spoke model of communication as it was the simplest to
+                    implement in the shortest amount of time. There are 4 separate parts in this artwork that needs to
+                    be addressed. The headset video player (using a surface book tablet portion), Hold down button,
+                    Visualization player, and multi-cam video switcher/timer display. When a client connects, they are
+                    given a choice between the 4 modes, and the web page dynamically changes with the choice and
+                    communicates with the server about the action.</p>
+            </div>
+            <div class="flex-2third side-padding">
+                <figure>
+                    <img src="img/interactiveart-headsetinternal.jpg">
+                </figure>
+            </div>
+            <div class="flex-2third side-padding">
+                    <figure>
+                        <img src="img/interactiveart-switcher.png">
+                    </figure>
+                </div>
+            <div class="flex-1third">
+                <p class="side-padding">One of the decisions I made was putting the actual timing mechanism on both the
+                    hold down button and the multi-cam switching. To avoid a bad connection messing with the timer,
+                    when a participant holds down a button, a timer is started locally and a timer down event is passed
+                    into the server and out into the timer display on the multi-cam computer. This makes for a smooth
+                    timer that does not stutter because of latency. When the participant stops holding the button, the
+                    local timer stopped, sends the final accurate time information to the timer display, and records it
+                    in the visualization. This solution ensures the accuracy and the smoothness of the timer while
+                    keeping accuracy up and packets low.</p>
+            </div>
+
+
+            <h2 class="flex-full section-title">final project reflection</h2>
+
+            <div class="flex-2third side-padding">
+                <figure>
+                    <img src="img/interactiveart-visualization.jpg">
+                </figure>
+            </div>
+            <div class="flex-1third">
+                <p class="side-padding">In the final project viewing open to the whole university, people were very
+                    interested in the project and wanted to beat other people’s scores. We’ve found that people are
+                    really competitive, and their time perception is almost never perfect. Our Artwork received a full
+                    mark at the end of the course and was shown as an example during the fall 2018 lecture.</p>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
