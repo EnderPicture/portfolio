@@ -30,7 +30,7 @@
         <img src="img/vr-headset-render-exploded.png" class="top-photo">
         <div class="head-text-con">
             <div class="head-text">
-                <h1>vr headset project</h1>
+                <h1>physical product design</h1>
             </div>
         </div>
     </div>
@@ -40,22 +40,26 @@
         <section class="content">
             <h2 class="flex-full section-title">introduction</h2>
 
+            <div class="flex-1third">
+                <p class="side-padding low-pad-bottom">Group Members:</p>
+                <p class="side-padding">Donny Wu, Ridge Zhang, Andrea Ma.</p>
+                <p class="side-padding">This final project was made for the material in design course IAT 336. Working
+                    In a group of three, we designed, prototyped, and created the final VR headset within a time span
+                    of 2 months.</p>
+                <p class="side-padding">This course is focused on how materials behave, manufacturing techniques,
+                    product design. The final project is an example of that where we were given two randomly chosen
+                    materials we had to use to complete our prototype. In this case, plastic and wood. We also have to
+                    design for ergonomics, ease of use, and for a persona.
+                </p>
+            </div>
             <div class="flex-2third side-padding">
                 <figure>
                     <img src="img/final-vr-headset.jpg">
+                    <figcaption>Final VR headset model</figcaption>
                 </figure>
-            </div>
-            <div class="flex-1third">
-                <p class="side-padding">This final project was made for the material design course IAT 336. Working In a group of three, we designed, prototyped, and created the final VR headset within a time span of 2 month. </p>
             </div>
 
             <h2 class="flex-full section-title">tools used</h2>
-
-            <div class="flex-2third side-padding">
-                <figure>
-                    <img src="img/vr-cutout pattern.png">
-                </figure>
-            </div>
             <div class="flex-1third side-padding">
                 <h3>Sketching</h3>
                 <ul>
@@ -64,59 +68,127 @@
                 <h3>Autodesk Maya</h3>
                 <ul>
                     <li>Low poly 3d modelling</li>
-                    <li>Used for secondary refinements and prototyping using laser cutters utilizing UV unfold and packing features</li>
+                    <li>Used for secondary refinements and prototyping using laser cutters utilizing UV unfold and
+                        packing features</li>
                     <li>Also used to form the VR headset to a human head for a comfortable fit. </li>
                 </ul>
                 <h3>SolidWorks</h3>
                 <ul>
-                    <li>Final 3D printing Stl creation, here I added many alignment tabs, precise slot creation for hinges and lenses, and foam cutting pattern creation. </li>
+                    <li>Final 3D printing STL creation, here I added many alignment tabs, precise slot creation for
+                        hinges and lenses, and foam cutting pattern creation. </li>
                 </ul>
             </div>
+            <div class="flex-2third side-padding">
+                <figure>
+                    <img src="img/vr-cutout pattern.png">
+                    <figcaption>Laser cut pattern for design iteration 2</figcaption>
+                </figure>
+            </div>
 
 
-            <h2 class="flex-full section-title">design Context</h2>
 
+            <h2 class="flex-full section-title">design context</h2>
+
+
+            <div class="flex-2third">
+                <p class="side-padding">Our headset will be used outdoors, during evenings with clear skies, since we
+                    plan for it to be used to help our persona stargaze. The headset will aid our persona in
+                    identifying different constellations, or show a clearer images of the stars without light pollution
+                    getting in the way. As such, since the headset is mostly used as an aid, it will be taken on and
+                    off fairly frequently so our persona can compare the view in the headset, with the actual view
+                    outdoors. For example, our user would be taking a walk outdoors during a camping trip, and he could
+                    take the headset with him during the walk to learn about the stars he can see during his walk.
+                    He’ll be keeping the headset on for the entire walk, so he can flip the headset up or down
+                    depending on if he wants to see the physical stars, or the virtual stars with all the information
+                    about them attached to it.</p>
+                <p class="side-padding">One of the constraints we had while designing this VR headset is that we were
+                    constrained to using two different materials, wood and plastic, at roughly a 50/50 ratio on the
+                    exterior. This restriction makes it not feasible to create compound curves. When I was sketching, I
+                    kept the tools available to us in mind, which is a laser cutter and a 3d printer.</p>
+            </div>
             <div class="flex-1third side-padding">
                 <figure>
+                    <img src="img/vr-interactiondiagram.png">
+                    <figcaption>Diagram for ways of interaction</figcaption>
+                </figure>
+            </div>
+
+            <h2 class="flex-full section-title">first iteration</h2>
+            <div class="flex-1third">
+                <p class="side-padding">I started with sketching out different forms that I thought would look cool and
+                    fit the persona of our project. With many to choose from, I chose one that could be good for a
+                    sketch model and went on making it viable for manufacture with the tools that we have. The one I've
+                    chosen have plenty of curves that might cause problems when making the sketch model, so I went on
+                    Maya to explore possibilities at the low poly style and possible flat packing solutions for the
+                    sketch model. I also imported a 3d head model to form the initial face device interface. One
+                    problem I faced when exporting the 3d model for laser cutting was how to export the UV unwrap file
+                    to a vector based file format. After a couple hours of research, I've found a script that can set
+                    each vertex's coordinates to UV coordinates, creating a flat plain model in the 3d view lower that
+                    can be rendered by the Maya's vector renderer. </p>
+            </div>
+            <div class="flex-2third side-padding">
+                <figure>
+                    <img src="img/vr-sketchmodel.jpg">
+                    <figcaption>First iteration sketch model</figcaption>
+                </figure>
+            </div>
+
+
+            <h2 class="flex-full section-title">second iteration</h2>
+
+
+            <div class="flex-1third">
+                <p class="side-padding">When making the second iteration of the physical prototype, I updated the Maya
+                    model so it looks better when sized to fit the actual VR headset. Having a higher polygon model,
+                    but only in one axis, which allows this design to still be flattened and laser cut. A thing I
+                    thought about was how can the headset be constructed so it can fit around the face nicely. I found
+                    that there are 3d scanned focal models online that I can scale to 90th percentile head size to use
+                    as a reference for the VR headset. The second sketch model is made out of cardstock since it is
+                    easy to laser cut, folds right on the dashed lines, and won't buckle at non-perforated lines. This
+                    helps in the folding and gluing process. A problem we faced was accounting in for the paper
+                    thickness because we did not know what kind of cardstock we were going to use to cut. So, when
+                    assembling, we needed to put a lot of effort stretching and glueing the top part to complete the
+                    shell.</p>
+            </div>
+            <div class="flex-2third side-padding">
+                <figure>
                     <img src="img/vr-prototype.jpg">
+                    <figcaption>Second iteration model with tape to keep the shape while the glue dries</figcaption>
                 </figure>
             </div>
-            <div class="flex-2third">
-                <p class="side-padding">Our headset will be used outdoors, during evenings with clear skies, since we plan for it to be used to help our persona stargaze. The headset will aid our persona in identifying different constellations, or show a clearer images of the stars without light pollution getting in the way. As such, since the headset is mostly used as an aid, it will be taken on and off fairly frequently so our persona can compare the view in the headset, with the actual view outdoors. For example, our user would be taking a walk outdoors during a camping trip, and he could take the headset with him during the walk to learn about the stars he can see during his walk. He’ll be keeping the headset on for the entire walk, so he can flip the headset up or down depending on if he wants to see the physical stars, or the virtual stars with all the information about them attached to it.</p>
-                <p class="side-padding">One of the constraints we had while designing this VR headset is that we were constrained to using two different materials, wood and plastic, at roughly a 50/50 ratio on the exterior. This restriction makes it not feasible to create compound curves. When I was sketching, I kept the tools available to us in mind, which is a laser cutter and a 3d printer.</p>
-            </div>
 
-            <h2 class="flex-full section-title">cutting</h2>
 
-            <div class="flex-2third side-padding">
-                <figure>
-                    <img src="img/vr-lasercut.jpg">
-                </figure>
-            </div>
+            <h2 class="flex-full section-title">final iteration</h2>
+
             <div class="flex-1third">
-                <p class="side-padding">For cutting and trimming, we decided to divide the list of parts into two major categories: parts that need to be cut precisely and parts that can allow minor uncertainties. Ideally, for accuracy and precision, all parts should be cut by laser cutters and printed by 3D printers; however, due to time, resource, and requirements, we had to complete some parts by hand and these parts included ones that does not require extremely high precision. In other words, the lid, the temple straps, the polystyrene and the soft PVC mat was cut by hand.</p>
+                <p class="side-padding">In the final model, I exported my slightly modified second Maya model into
+                    SolidWorks, which I can then play connect the dots game and loft the surfaces out. Through adding
+                    thickness to these surfaces and multiple boolean operations, the base 3d model shell is formed.
+                    Since we need to use wood and plastic in roughly 50/50 bases on the outside and we have plenty of
+                    curves, we had to use extremely thin, laser cut wood. This means that wood cannot be a structural
+                    element of the headset. ABS 3d printed plastic shell was created using the solid works model that
+                    was split into 4 pieces to fit inside the 3d printer. Each piece have alignment pegs to help
+                    alignment when assembling and glueing. The laser-cut pattern on the thin plywood was created first
+                    using the un triangulated UV unwrap pattern from Maya, then for every single quad, we had to map a
+                    vector cut pattern onto it using a special plugin that allows for 4 corners free transform. This is
+                    to allow for the curve to create the double radius curve needed in this project.</p>
             </div>
-
-
-            <h2 class="flex-full section-title">assembly</h2>
-
-            <div class="flex-2third side-padding">
-                <figure>
-                    <img src="img/vr-assembly.jpg">
-                </figure>
-            </div>
-            <div class="flex-1third">
-                <p class="side-padding">Once all the pieces from the 3D printer were finished and the supports were all dissolved, we picked up the pieces from Solidspace. We printed out the pieces with little tabs in them so we could glue them back together easily with methyl chlorate. During the process, we also glued the lenses into the headset. After we finished glueing our structure together, we could then glue the wood onto the structure. Luckily, the laser cut wood bent nicely to the curves of the structure, and we were able to glue it onto the plastic with wood glue. For the lid, we took a hinge from our boxes, and screwed it to connect the lid and the plastic structure. We also added a small dowel to the plastic structure, so it would help hold the hinge in place. Lastly, we had to assemble the strap for the head. We cut holes into the PVC/styrene strap with a hole puncher, and tied it to the holes we made in the arms of the headset.</p>
-            </div>
-            <h2 class="flex-full section-title">finishing</h2>
-
             <div class="flex-2third side-padding">
                 <figure>
                     <img src="img/vr-finishing.jpg">
+                    <figcaption>Final model showing the 3D printed core and laser-cut wood</figcaption>
                 </figure>
             </div>
-            <div class="flex-1third">
-                <p class="side-padding">The finishing for the parts happened simultaneously to the assembly, since different parts needed to be in different stages before we could add finishing to it. The first stage would be using super glue to glue any wooden edges that did not join with the 3D printed plastic parts. Next, varnish was added to the wood to help protect it from the outside elements and help keep its shape. Third, the varnish coating was sanded using a 320 grit fine sandpaper to remove unflat drips of varnish. Last, to make the headset comfortable to wear, we lined the edges of the inside with PVC.</p>
+
+            <h2 class="flex-full section-title">reflection</h2>
+            <div class="flex-2third">
+                <p class="side-padding">During the course of this project, I've applied and extended a lot of what I have hearned in the School of Interactive Arts and Technology. With solid works, I have learned a full array of new features include boolean operations, derived parts, importing files from Maya and lofting. I have learnt what software is good for what task. For example, Maya is great with organic shapes and making the first two iterations, but does not do well with boolean operations and precise drafting goals. Solidworks, on the other hand, is not very flexible when it comes to creating organic forms. Manufacturing processes and tolerances are also something I have come away with. The laser beam has a width that needs to be accounted for minimum cut distance. 3D printers have support materials to worry about and the orientation of how it is printed effects the structural integrity in one direction. At the end at the final public showcase, many people were impressed with the final project and it fits perfectly around the professor's head. We received the highest mark in the class for this project.</p>
+            </div>
+            <div class="flex-1third side-padding">
+                <figure>
+                    <img src="img/vr-glass.png">
+                    <figcaption>A frosted glass rendering showing the inner structure</figcaption>
+                </figure>
             </div>
 
         </section>

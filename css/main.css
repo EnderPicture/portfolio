@@ -211,14 +211,31 @@ header {
 
 figure {
     width: 100%;
-    height: 30rem;
+    height: 25rem;
     margin: 0;
     border-radius: .5rem;
     overflow: hidden;
+    position: relative;
 }
 figure > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
+}
+figure > figcaption {
+    position: absolute;
+    bottom: 0;
+    padding: .5rem 2rem;
+    background-color: #191919A0;
+    width: 100%;
+}
+
+section {
+    align-items: center;
+    justify-content: center;
+}
+
+.low-pad-bottom {
+    padding-bottom: .25rem;
 }
