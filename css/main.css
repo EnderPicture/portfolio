@@ -239,3 +239,22 @@ section {
 .low-pad-bottom {
     padding-bottom: .25rem;
 }
+
+.main-content >*:last-child {
+    padding-bottom: 20rem;
+}
+
+#contact>a {
+    margin: 0;
+    padding: 1rem 3rem;
+    font-size: 1rem;
+
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+#contact>a:hover, #contact>a:focus {
+    color: #e0e0e0;
+    background-color: #55555540;
+    border-radius: 1rem;
+}

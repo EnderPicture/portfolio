@@ -39,29 +39,28 @@
     <div class="main-content">
         <section class="content">
             <h2 class="flex-full section-title">introduction</h2>
-
-            <div class="flex-2third side-padding">
-                <figure>
-                    <img src="img/interactiveart-setup.jpg">
-                </figure>
-            </div>
             <div class="flex-1third">
+                <p class="side-padding low-pad-bottom">Group Members:</p>
+                <p class="side-padding">Donny Wu, Carolyn Yip, Cora Fu, Kai Von Dehn.</p>
                 <p class="side-padding">This project took place during spring 2018 IAT 222 project where the final
                     project was an interactive art project in groups of 4. During the 2 months given for this project,
                     we created a unique art piece that was displayed at the SIAT's interactive art festival at the end
-                    of the semester. The artwork consists of a headpiece which uses a uses the surface book’s tablet
-                    portion to display a video plus sound effects as well as hosting a server, and several
-                    sub-components that are connected to the server that controls and governs the audiovisual
-                    experience.</p>
+                    of the semester. We created an immersive experience where the participant donned a headpiece and
+                    had the audio-visual inside controlled by an external participant. The goal was to take them on a
+                    journey where they get lost in time. In this project, I programmed the front end and back end with
+                    web technologies for greatest compatibility and flexibility.</p>
             </div>
+            <div class="flex-2third side-padding">
+                <figure>
+                    <img src="img/interactiveart-setup.jpg">
+                    <figcaption>The final setup of the interactive artwork being shown at SFU Surrey</figcaption>
+                </figure>
+            </div>
+
 
             <h2 class="flex-full section-title">tools used</h2>
 
-            <div class="flex-2third side-padding">
-                <figure>
-                    <img src="img/interactiveart-code.png">
-                </figure>
-            </div>
+
             <div class="flex-1third side-padding">
                 <h3>Node.js + Socket.io + Express</h3>
                 <ul>
@@ -78,6 +77,12 @@
                     <li>Socket.io communicates and get updates from the server in real time.</li>
                 </ul>
             </div>
+            <div class="flex-2third side-padding">
+                <figure>
+                    <img src="img/interactiveart-code.png">
+                    <figcaption>Node.js and Socket.io code used for periodic time sync, video timecode encoding, and controls</figcaption>
+                </figure>
+            </div>
 
 
             <h2 class="flex-full section-title">designing the system</h2>
@@ -85,17 +90,21 @@
             <div class="flex-2third side-padding">
                 <figure>
                     <img src="img/interactiveart-diagram.png">
+                    <figcaption>Interaction diagram for the art project</figcaption>
                 </figure>
             </div>
             <div class="flex-1third">
                 <p class="side-padding">When I was designing the system, I know that there needed to be several
-                    interaction points modes. Where these programs will run are unknown, and how they are going to run
-                    are unknown as well. I would need a video player and graphics in the same interface, and everything
-                    all with a real-time connection. This is why I chose the web. Because I know it can play videos
-                    with the HTML5 video player, draw graphics, and communicate with servers. When choosing which
-                    computer will be the central server, I’ve chosen the one with playing the highest quality video
-                    (3000x2000 30fps) because this will all have to be streamed over wifi and handling over LocalHost
-                    will be way better.</p>
+                    interaction points modes, where these programs will run are unknown, and how they are going to run
+                    are unknown as well. This is because we have not secured any devices to run the installation, we do
+                    not know the capabilities of those devices, and where we are going to display the final
+                    installation. Having stuff split up into its bare essentials will ensure that things can run
+                    smoothly with any equipment we got. I know I would need a video player and graphics in the same
+                    interface, and everything all with a real-time connection. This is why I chose the web. Because I
+                    know it can play videos with the HTML5 video player, draw graphics, and communicate with servers.
+                    When choosing which computer will be the central server, I’ve chosen the one with playing the
+                    highest quality video (3000x2000 30fps) because this will all have to be streamed over wifi and
+                    handling over LocalHost will be way better.</p>
             </div>
             <div class="flex-1third">
                 <p class="side-padding">This server uses the hub-spoke model of communication as it was the simplest to
@@ -108,11 +117,13 @@
             <div class="flex-2third side-padding">
                 <figure>
                     <img src="img/interactiveart-headsetinternal.jpg">
+                    <figcaption>Inside the void headset before it was finished</figcaption>
                 </figure>
             </div>
             <div class="flex-2third side-padding">
                 <figure>
                     <img src="img/interactiveart-switcher.png">
+                    <figcaption>The Multicam video selection UI where it shows the timer and the 5 videos they can choose from playing simultaneously</figcaption>
                 </figure>
             </div>
             <div class="flex-1third">
@@ -132,13 +143,17 @@
             <div class="flex-2third side-padding">
                 <figure>
                     <img src="img/interactiveart-visualization.jpg">
+                    <figcaption>The visualization for everyone's time where the white line indicates exactly one minute and the edge is two</figcaption>
                 </figure>
             </div>
             <div class="flex-1third">
                 <p class="side-padding">In the final project viewing open to the whole university, people were very
                     interested in the project and wanted to beat other people’s scores. We’ve found that people are
                     really competitive, and their time perception is almost never perfect. Our Artwork received a full
-                    mark at the end of the course and was shown as an example during the fall 2018 lecture.</p>
+                    mark at the end of the course and was shown as an example during the fall 2018 lecture. Through
+                    this experience, I have learnt how to integrate several parts of my skill set into one functioning
+                    product, how to hook up several computers to create a reliable network, and how to sync two video
+                    players together so they are playing at the exact time code with clip offsets.</p>
             </div>
         </section>
     </div>
