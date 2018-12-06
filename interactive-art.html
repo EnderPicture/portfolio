@@ -42,13 +42,11 @@
             <div class="flex-1third">
                 <p class="side-padding low-pad-bottom">Group Members:</p>
                 <p class="side-padding">Donny Wu, Carolyn Yip, Cora Fu, Kai Von Dehn.</p>
-                <p class="side-padding">This project took place during spring 2018 IAT 222 project where the final
-                    project was an interactive art project in groups of 4. During the 2 months given for this project,
-                    we created a unique art piece that was displayed at the SIAT's interactive art festival at the end
-                    of the semester. We created an immersive experience where the participant donned a headpiece and
-                    had the audio-visual inside controlled by an external participant. The goal was to take them on a
-                    journey where they get lost in time. In this project, I programmed the front end and back end with
-                    web technologies for greatest compatibility and flexibility.</p>
+                <p class="side-padding">As part of the second year Interactive Arts course, IAT 222, I was in a group
+                    of four, we created an immersive experience where the participant donned an audio-visual headpiece
+                    controlled by an external participant. The goal was to take them on a journey where they get lost
+                    in time. In this project, I programmed the front end and back end with web technologies for
+                    greatest compatibility and flexibility.</p>
             </div>
             <div class="flex-2third side-padding">
                 <figure>
@@ -79,8 +77,8 @@
             </div>
             <div class="flex-2third side-padding">
                 <figure>
-                    <img src="img/interactiveart-code.png">
-                    <figcaption>Node.js and Socket.io code used for periodic time sync, video timecode encoding, and controls</figcaption>
+                    <img src="img/interactiveart-headsetinternal.jpg">
+                    <figcaption>Inside the void headset before it was finished</figcaption>
                 </figure>
             </div>
 
@@ -94,36 +92,35 @@
                 </figure>
             </div>
             <div class="flex-1third">
-                <p class="side-padding">When I was designing the system, I know that there needed to be several
-                    interaction points modes, where these programs will run are unknown, and how they are going to run
-                    are unknown as well. This is because we have not secured any devices to run the installation, we do
-                    not know the capabilities of those devices, and where we are going to display the final
-                    installation. Having stuff split up into its bare essentials will ensure that things can run
-                    smoothly with any equipment we got. I know I would need a video player and graphics in the same
-                    interface, and everything all with a real-time connection. This is why I chose the web. Because I
-                    know it can play videos with the HTML5 video player, draw graphics, and communicate with servers.
-                    When choosing which computer will be the central server, I’ve chosen the one with playing the
-                    highest quality video (3000x2000 30fps) because this will all have to be streamed over wifi and
-                    handling over LocalHost will be way better.</p>
+                <p class="side-padding">Our art installation has five component to consider. A server to host the web
+                    server and socket server, a client for the first participant to have the audiovisual experience in
+                    the headset, a client for the first participant to press and hold to record the time, a MultiCam
+                    control station where a second participant can try to mess up the first participant's sense of time
+                    even more, and a data visualization client where all the past participants' are shown.</p>
             </div>
             <div class="flex-1third">
-                <p class="side-padding">This server uses the hub-spoke model of communication as it was the simplest to
-                    implement in the shortest amount of time. There are 4 separate parts in this artwork that needs to
-                    be addressed. The headset video player (using a surface book tablet portion), Hold down button,
-                    Visualization player, and multi-cam video switcher/timer display. When a client connects, they are
-                    given a choice between the 4 modes, and the web page dynamically changes with the choice and
-                    communicates with the server about the action.</p>
+                <p class="side-padding">One of the challenges I had was keeping the videos in sync between devices. I
+                    tried just sending a sync command from the video player to the MultiCam player. This created
+                    jerkiness in the video because there is latency between when it was sent to when it was received.
+                    So, I compensated by adding a condition where if the two videos have drifted too much apart, like
+                    one-tenth, of a second, the multicam footage will be corrected, but otherwise, just let it play.
+                </p>
+                <p class="side-padding">Another problem I solved was how to map a playing video's code onto a longer
+                    clip. This was solved with some timecode math and multiplier that was kept at both the multicam and
+                    video player's code.
+                </p>
             </div>
             <div class="flex-2third side-padding">
                 <figure>
-                    <img src="img/interactiveart-headsetinternal.jpg">
-                    <figcaption>Inside the void headset before it was finished</figcaption>
+                    <img src="img/interactiveart-diagram-timecode.png">
+                    <figcaption>The timecode remapper diagram</figcaption>
                 </figure>
             </div>
             <div class="flex-2third side-padding">
                 <figure>
                     <img src="img/interactiveart-switcher.png">
-                    <figcaption>The Multicam video selection UI where it shows the timer and the 5 videos they can choose from playing simultaneously</figcaption>
+                    <figcaption>The Multicam video selection UI where it shows the timer and the 5 videos they can
+                        choose from playing simultaneously</figcaption>
                 </figure>
             </div>
             <div class="flex-1third">
@@ -143,7 +140,8 @@
             <div class="flex-2third side-padding">
                 <figure>
                     <img src="img/interactiveart-visualization.jpg">
-                    <figcaption>The visualization for everyone's time where the white line indicates exactly one minute and the edge is two</figcaption>
+                    <figcaption>The visualization for everyone's time where the white line indicates exactly one minute
+                        and the edge is two</figcaption>
                 </figure>
             </div>
             <div class="flex-1third">

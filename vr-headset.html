@@ -43,14 +43,12 @@
             <div class="flex-1third">
                 <p class="side-padding low-pad-bottom">Group Members:</p>
                 <p class="side-padding">Donny Wu, Ridge Zhang, Andrea Ma.</p>
-                <p class="side-padding">This final project was made for the material in design course IAT 336. Working
-                    In a group of three, we designed, prototyped, and created the final VR headset within a time span
-                    of 2 months.</p>
-                <p class="side-padding">This course is focused on how materials behave, manufacturing techniques,
-                    product design. The final project is an example of that where we were given two randomly chosen
-                    materials we had to use to complete our prototype. In this case, plastic and wood. We also have to
-                    design for ergonomics, ease of use, and for a persona.
-                </p>
+                <p class="side-padding">This final project was made for the Material in Design course, IAT 336, A
+                    course focused on how materials behave, manufacturing techniques, and physical product design.</p>
+                <p class="side-padding">Working in a group of 3, we designed, prototyped, and create a VR headset
+                    within 2 months</p>
+                <p class="side-padding">The constraint was we had to use plastic and wood and being mindful of
+                    ergonomics, ease of use, and a specific persona.</p>
             </div>
             <div class="flex-2third side-padding">
                 <figure>
@@ -90,22 +88,22 @@
             <h2 class="flex-full section-title">design context</h2>
 
 
-            <div class="flex-2third">
-                <p class="side-padding">Our headset will be used outdoors, during evenings with clear skies, since we
-                    plan for it to be used to help our persona stargaze. The headset will aid our persona in
-                    identifying different constellations, or show a clearer images of the stars without light pollution
-                    getting in the way. As such, since the headset is mostly used as an aid, it will be taken on and
-                    off fairly frequently so our persona can compare the view in the headset, with the actual view
-                    outdoors. For example, our user would be taking a walk outdoors during a camping trip, and he could
-                    take the headset with him during the walk to learn about the stars he can see during his walk.
-                    He’ll be keeping the headset on for the entire walk, so he can flip the headset up or down
-                    depending on if he wants to see the physical stars, or the virtual stars with all the information
-                    about them attached to it.</p>
-                <p class="side-padding">One of the constraints we had while designing this VR headset is that we were
+            <div class="flex-2third side-padding">
+                <h3>User persona: stargazer</h3>
+                <ul>
+                    <li>Can be used outside</li>
+                    <li>Easily remove and put on</li>
+                    <li>Connected with nature</li>
+                    <li>Portable enough to take around while on hikes</li>
+                </ul>
+                <h3>Design constraint</h3>
+                <p>One of the constraints we had while designing this VR headset is that we were
                     constrained to using two different materials, wood and plastic, at roughly a 50/50 ratio on the
                     exterior. This restriction makes it not feasible to create compound curves. When I was sketching, I
-                    kept the tools available to us in mind, which is a laser cutter and a 3d printer.</p>
+                    kept the tools available to us in mind, which is a laser cutter for wood and a 3d printer for
+                    plastic.</p>
             </div>
+
             <div class="flex-1third side-padding">
                 <figure>
                     <img src="img/vr-interactiondiagram.png">
@@ -115,16 +113,12 @@
 
             <h2 class="flex-full section-title">first iteration</h2>
             <div class="flex-1third">
-                <p class="side-padding">I started with sketching out different forms that I thought would look cool and
-                    fit the persona of our project. With many to choose from, I chose one that could be good for a
-                    sketch model and went on making it viable for manufacture with the tools that we have. The one I've
-                    chosen have plenty of curves that might cause problems when making the sketch model, so I went on
-                    Maya to explore possibilities at the low poly style and possible flat packing solutions for the
-                    sketch model. I also imported a 3d head model to form the initial face device interface. One
-                    problem I faced when exporting the 3d model for laser cutting was how to export the UV unwrap file
-                    to a vector based file format. After a couple hours of research, I've found a script that can set
-                    each vertex's coordinates to UV coordinates, creating a flat plain model in the 3d view lower that
-                    can be rendered by the Maya's vector renderer. </p>
+                <p class="side-padding">In the first iteration, a challenge I had was how to convert a 3D model from
+                    Maya to a laser cut file. I thought about UV unwrapping it but the UV map exporter only exports in
+                    raster formats. After a couple hours of research, I've found a script that can set each vertex's
+                    coordinates to UV coordinates, creating a flat plane model in the 3d view, which that can be
+                    rendered by the Maya's vector renderer. The result was an illustrator file that needed very little
+                    editing to get into a laser cutter readable format.</p>
             </div>
             <div class="flex-2third side-padding">
                 <figure>
@@ -138,17 +132,14 @@
 
 
             <div class="flex-1third">
-                <p class="side-padding">When making the second iteration of the physical prototype, I updated the Maya
-                    model so it looks better when sized to fit the actual VR headset. Having a higher polygon model,
-                    but only in one axis, which allows this design to still be flattened and laser cut. A thing I
-                    thought about was how can the headset be constructed so it can fit around the face nicely. I found
-                    that there are 3d scanned focal models online that I can scale to 90th percentile head size to use
-                    as a reference for the VR headset. The second sketch model is made out of cardstock since it is
-                    easy to laser cut, folds right on the dashed lines, and won't buckle at non-perforated lines. This
-                    helps in the folding and gluing process. A problem we faced was accounting in for the paper
-                    thickness because we did not know what kind of cardstock we were going to use to cut. So, when
-                    assembling, we needed to put a lot of effort stretching and glueing the top part to complete the
-                    shell.</p>
+                <p class="side-padding">The second iteration model was made to see how it fits around the face. It came
+                    out really well. This first attempt at form fitting the face went well because I used a 90th
+                    percentile sized 3D scanned head to make my contours around the face.</p>
+                <p class="side-padding">The model was made out of cardstock since it is easy to laser cut, folds right
+                    on the dashed lines, and won't buckle at non-perforated lines. This helps in the folding and gluing
+                    process. A problem we faced was accounting in for the paper thickness because we did not know what
+                    kind of cardstock we were going to use to cut. So, when assembling, we needed to put a lot of
+                    effort into stretching and glueing for the top part to complete the shell to close.</p>
             </div>
             <div class="flex-2third side-padding">
                 <figure>
@@ -161,17 +152,15 @@
             <h2 class="flex-full section-title">final iteration</h2>
 
             <div class="flex-1third">
-                <p class="side-padding">In the final model, I exported my slightly modified second Maya model into
-                    SolidWorks, which I can then play connect the dots game and loft the surfaces out. Through adding
-                    thickness to these surfaces and multiple boolean operations, the base 3d model shell is formed.
-                    Since we need to use wood and plastic in roughly 50/50 bases on the outside and we have plenty of
-                    curves, we had to use extremely thin, laser cut wood. This means that wood cannot be a structural
-                    element of the headset. ABS 3d printed plastic shell was created using the solid works model that
-                    was split into 4 pieces to fit inside the 3d printer. Each piece have alignment pegs to help
-                    alignment when assembling and glueing. The laser-cut pattern on the thin plywood was created first
-                    using the un triangulated UV unwrap pattern from Maya, then for every single quad, we had to map a
-                    vector cut pattern onto it using a special plugin that allows for 4 corners free transform. This is
-                    to allow for the curve to create the double radius curve needed in this project.</p>
+                <p class="side-padding">In the second iteration, everything went really well. I was really proud of my
+                    work making the 3D printed STL file and laser cut file. </p>
+                <p class="side-padding">The 3D print STL file was created in SolidWorks with a single model split into
+                    4, each with added support for hinges, alignment slots, and draft angles for a nice fit while
+                    glueing.</p>
+                <p class="side-padding">The Laser cut file was created using the UV unwrapped Maya geometry with
+                    manual scaling to match the size of the real size model. Each face of the unwrapped model was
+                    mapped with a flexible wood cutting pattern. This enables us to curve the wood in compound curves.</p>
+
             </div>
             <div class="flex-2third side-padding">
                 <figure>
@@ -181,19 +170,30 @@
             </div>
 
             <h2 class="flex-full section-title">reflection</h2>
-            <div class="flex-2third">
+            <div class="flex-1third">
                 <p class="side-padding">During the course of this project, I've applied and extended a lot of what I
                     have learned in the School of Interactive Arts and Technology. With solid works, I have learned a
                     full array of new features include boolean operations, derived parts, importing files from Maya and
-                    lofting. I have learnt what software is good for what task. For example, Maya is great with organic
-                    shapes and making the first two iterations, but does not do well with boolean operations and
-                    precise drafting goals. Solidworks, on the other hand, is not very flexible when it comes to
-                    creating organic forms. Manufacturing processes and tolerances are also something I have come away
-                    with. The laser beam has a width that needs to be accounted for minimum cut distance. 3D printers
-                    have support materials to worry about and the orientation of how it is printed effects the
-                    structural integrity in one direction. At the end at the final public showcase, many people were
-                    impressed with the final project and it fits perfectly around the professor's head. We received the
-                    highest mark in the class for this project.</p>
+                    lofting. I have learnt what software is good for what task.</p>
+                <p class="side-padding">At the end at the final public showcase, many people were impressed with the
+                    final project and it fits perfectly around the professor's head. We received the highest mark in
+                    the class for this project.</p>
+            </div>
+            <div class="flex-1third side-padding">
+                <h3>SolidWorks is good at</h3>
+                <ul>
+                    <li>Modelling with precise measurements.</li>
+                    <li>Solid geometry modelling.</li>
+                    <li>Creating flat surfaces.</li>
+                    <li>More engineering CAD-focused.</li>
+                </ul>
+                <h3>Maya is good at</h3>
+                <ul>
+                    <li>initial design.</li>
+                    <li>Creating organic shapes.</li>
+                    <li>Moving around a vertex, edges, and faces anytime you want.</li>
+                    <li>Really flexible.</li>
+                </ul>
             </div>
             <div class="flex-1third side-padding">
                 <figure>
