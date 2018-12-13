@@ -279,6 +279,10 @@ section {
 }
 
 @media (max-width: 40rem) {
+    .flex-half {
+        flex-basis: 100%;
+    }
+
     .flex-1third {
         flex-basis: 100%;
     }
