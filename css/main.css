@@ -232,7 +232,7 @@ section {
     padding-bottom: 20rem;
 }
 
-#contact>a {
+#about>a {
     margin: 0;
     padding: 1rem 3rem;
     font-size: 1rem;
@@ -241,7 +241,7 @@ section {
     text-align: center;
     text-decoration: none;
 }
-#contact>a:hover, #contact>a:focus {
+#about>a:hover, #about>a:focus {
     color: #e0e0e0;
     background-color: #55555540;
     border-radius: 1rem;
@@ -307,5 +307,21 @@ section {
     .head-text > * {
         padding-right: 1.5rem;
         padding-left: 1.5rem;
+    }
+
+    .header-nav-con a {
+        flex-basis: 50%;
+    }
+
+    .nav:first-child {
+        text-align: end;
+    }
+    .nav:last-child {
+        text-align: start;
+    }
+
+    .logo {
+        flex-basis: 100%;
+        border-radius: 0;
     }
 }
