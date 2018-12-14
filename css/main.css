@@ -247,6 +247,11 @@ section {
     border-radius: 1rem;
 }
 
+.about {
+    max-width: 30rem;
+    margin: auto;
+}
+
 /* flex---------------------------- */
 .flex-half {
     flex-basis: 50%;
