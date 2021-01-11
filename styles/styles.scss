@@ -100,9 +100,11 @@ header {
 
     position: relative;
     &.header-incandescent {
+        background-position: center;
         background-image: url("../images/the-incandescent-enemy/the-incandescent-enemy.png");
     }
     &.header-sirius-train {
+        background-position: center;
         background-image: url("../images/sirius-train-game/sirius-train-game.png");
     }
     &.short {
