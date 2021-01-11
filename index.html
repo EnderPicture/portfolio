@@ -1,84 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Donny's portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/normalize.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="css/index.css" />
-    <!-- <script src="main.js"></script> -->
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Donny's Portfolio</title>
 </head>
 
 <body>
     <header>
-        <div class="header-con">
-            <div class="header-logo-con">
-                <a class="logo" href="index.html">Donny Wu</a>
+        <nav class="nav">
+            <div class="nav__content mid-flex">
+                <a href="index.html" class="logo">Donny Wu</a>
+                <div class="spacer"></div>
+                <a href="#contact">contact</a>
             </div>
-            <nav class="header-nav-con">
-                <a class="nav" href="#projects">projects</a>
-                <a class="nav" href="#about">about me</a>
-            </nav>
-        </div>
+        </nav>
+        <section>
+            <div class="cover">
+                <div class="cover__blur">
+                    <h1 class="mid-flex">Hello</h1>
+                </div>
+            </div>
+        </section>
     </header>
-
-    <div class="photo-background">
-        <img src="img/background-clouds.jpg" class="top-photo">
-        <div class="head-text-con">
-            <div class="head-text">
-                <h1>Donny's portfolio</h1>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="main-content">
-        <section class="content" id="projects">
-            <h2 class="flex-full section-title">projects</h2>
-
-            <div class="flex-half project side-padding">
-                <a class="full-size-div project-link" href="vr-headset.html">
-                    <div class="scale full-size-div">
-                        <img class="project-img" src="img/vr-headset-render-exploded.png">
-                        <div class="project-content">
-                            <p>physical product design - vr headset</p>
-                        </div>
+    <main>
+        <section class="mid">
+            <h2>Who am I?</h2>
+            <p class="reading-width">I am a game developer who enjoys 3D environments and prototyping new ideas.
+                Love being hands-on, creating accessible, beautiful, and functional projects, the satisfaction of
+                getting each detail right is what I thrive for. Being always interested in the technical side, I also
+                enjoy digging into how stuff works and how I can modify it. During my spare time, I enjoy photography,
+                hiking, spending time with nature, and keeping up with technological advancements. </p>
+        </section>
+        <section>
+            <h2 class="mid">My Works</h2>
+            <div class="mid-flex works-con">
+                <a href="the-incandescent-enemy.html" class="work-item">
+                    <img src="images/the-incandescent-enemy/the-incandescent-enemy.png"
+                        alt="A frame from the film The Incandescent Enemy">
+                    <div class="work-item__desc">
+                        <h3>The Incandescent Enemy</h3>
+                        <p>A 3D animated film created from scratch using Maya, Arnold GPU, Substance Painter, NASA
+                            Imagery, and Many other tools. </p>
+                    </div>
+                </a>
+                <a href="sirius-train-game.html" class="work-item">
+                    <img src="images/sirius-train-game/sirius-train-game.png"
+                        alt="A screen capture from the game Sirius Train Game">
+                    <div class="work-item__desc">
+                        <h3>Sirius Train Game</h3>
+                        <p>A "calming" game where you get to drive three different types of trains, the bullet train,
+                            diesel train, and steam train.</p>
                     </div>
                 </a>
             </div>
-            <div class="flex-half project side-padding">
-                <a class="full-size-div project-link" href="interactive-art.html">
-                    <div class="scale full-size-div">
-                        <img class="project-img" src="img/interactiveart-sitting.jpg">
-                        <div class="project-content">
-                            <p>interactive art project - what is a minute</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-
         </section>
-        <section id="about">
-            <h2 class="flex-full section-title">about me</h2>
-            <div class="flex-full side-padding">
-                <p class="about">
-                    I am a multimedia programmer and maker at heart. I love to be hands-on and see ideas refined, realized,
-                    used, and flourish. I am interested in programming, 3D graphics, robotics, physical product design, prototyping,
-                    UX, and design. During my free time, I enjoy hiking, taking photos, experimenting with code, learning
-                    new programs, and taking things apart.
-                </p>
+    </main>
+    <footer>
+        <section class="mid">
+            <h2 id="contact">Contact</h2>
+            <div class="items-list">
+                <a class="item" href="mailto:todonnyw@gmail.com">Email</a>
+                <a class="item" href="https://www.linkedin.com/in/donny-wu-4b848b87/">Linked In</a>
+                <a class="item" href="https://github.com/EnderPicture">GitHub</a>
             </div>
-            <a href="mailto:donnyw@sfu.ca">email</a>
-            <a href="https://github.com/enderpicture">github</a>
-            <a href="https://500px.com/enderpicture">500px</a>
-            <a href="https://www.google.com/maps/contrib/106429026401126109793/photos/">google streetview</a>
+            <h2>Class Requirements</h2>
+            <div class="items-list">
+                <a class="item" href="style-guide.html">Style Guide</a>
+                <a class="item" href="citations.html">Citations</a>
+                <a class="item" href="https://github.com/EnderPicture/portfolio-339">Git Repo</a>
+            </div>
         </section>
-    </div>
+    </footer>
 </body>
 
 </html>

@@ -1,0 +1,347 @@
+$white: #ddd;
+$black: #222;
+$accent: #57c9f8;
+
+$tablet-break: 62rem;
+$mobile-break: 39rem;
+
+@import "./normalize.scss";
+
+* {
+    box-sizing: border-box;
+    font-family: "Ubuntu", sans-serif;
+    color: $white;
+    scroll-behavior: smooth;
+}
+body {
+    margin: 0;
+    background-color: $black;
+    overflow-x: hidden;
+    font-size: 1.2rem;
+    @media screen and (max-width: $mobile-break) {
+        font-size: 1rem;
+    }
+}
+img {
+    object-fit: cover;
+}
+h1,
+h2,
+h3,
+h4 {
+    margin: 1em 0;
+}
+.figure {
+    width: 100%;
+    margin: 0;
+    > img {
+        width: 100%;
+    }
+}
+.nav {
+    position: fixed;
+    background-color: rgba($black, 0.5);
+    backdrop-filter: blur(25px);
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    &_spacer {
+        flex: 1;
+    }
+    &__content {
+        display: flex;
+        flex: 0;
+        flex-shrink: 1;
+        .spacer {
+            flex: 1;
+        }
+        .logo {
+            font-weight: 900;
+            color: $accent;
+            text-shadow: 0 0 2px rgba($accent, 0.25),
+                0 0 4px rgba($accent, 0.25), 0 0 8px rgba($accent, 0.25),
+                0 0 16px rgba($accent, 0.25), 0 0 32px rgba($accent, 0.25);
+        }
+        > a {
+            color: $white;
+            text-decoration: none;
+            padding: 1rem;
+            &:first-child {
+                padding-left: 0;
+            }
+            &:last-child {
+                padding-right: 0;
+            }
+
+            transition: 0.6s ease;
+            &:hover {
+                opacity: 0.5;
+                transform: translateY(2px);
+                transition: 0.2s ease;
+            }
+            &:active {
+                opacity: 0.25;
+                transform: translateY(4px);
+                transition: 0.2s ease;
+            }
+        }
+    }
+    &.demo {
+        position: initial;
+    }
+}
+header {
+    height: 60vh;
+    min-height: 20rem;
+    background-position: center;
+    background-size: cover;
+    background-image: url("https://images.unsplash.com/photo-1524168644224-a521b6533306?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+
+    position: relative;
+    &.header-incandescent {
+        background-image: url("../images/the-incandescent-enemy/the-incandescent-enemy.png");
+    }
+    &.header-sirius-train {
+        background-image: url("../images/sirius-train-game/sirius-train-game.png");
+    }
+    &.short {
+        height: 40vh;
+        @media screen and (max-width: $tablet-break) {
+            min-height: 10rem;
+        }
+    }
+    > section {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($black, 0.5);
+        z-index: 0;
+    }
+}
+.cover {
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+    flex-direction: column;
+    &__blur {
+        background-color: rgba($black, 0.5);
+        backdrop-filter: blur(25px);
+    }
+}
+h1 {
+    font-size: 10rem;
+    margin: 0;
+    color: $white;
+    text-shadow: 0 0 2px rgba($white, 0.18), 0 0 4px rgba($white, 0.18),
+        0 0 8px rgba($white, 0.18), 0 0 16px rgba($white, 0.18),
+        0 0 32px rgba($white, 0.18);
+    padding: 0.1em 0;
+    &.small {
+        font-size: 5rem;
+        @media screen and (max-width: $tablet-break) {
+            font-size: 2rem;
+        }
+    }
+    @media screen and (max-width: $tablet-break) {
+        font-size: 3.5rem;
+    }
+}
+section,
+header {
+    margin-bottom: 5rem;
+    @media screen and (max-width: $tablet-break) {
+        margin-bottom: 2rem;
+    }
+}
+.mid {
+    margin-right: auto;
+    margin-left: auto;
+    width: 50rem;
+    @media screen and (max-width: $tablet-break) {
+        width: initial;
+        margin-right: 5rem;
+        margin-left: 5rem;
+    }
+    @media screen and (max-width: $mobile-break) {
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+    &-flex {
+        margin-right: auto;
+        margin-left: auto;
+        min-width: 50rem;
+        width: 60vw;
+        @media screen and (max-width: $tablet-break) {
+            min-width: initial;
+            width: initial;
+            margin-right: 5rem;
+            margin-left: 5rem;
+        }
+        @media screen and (max-width: $mobile-break) {
+            margin-right: 1rem;
+            margin-left: 1rem;
+        }
+    }
+}
+.works-con {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    @media screen and (max-width: $tablet-break) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: $mobile-break) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+.work-item {
+    position: relative;
+    border-radius: 0.5rem;
+    transform: translate(0, 0);
+    overflow: hidden;
+    transition: 0.6s ease;
+    &:hover {
+        opacity: 0.5;
+        transform: translateY(2px);
+        transition: 0.2s ease;
+        > img {
+            transform: scale(1.05);
+            transition: 0.2s ease;
+        }
+    }
+    &:active {
+        opacity: 0.25;
+        transform: translateY(4px);
+        transition: 0.2s ease;
+    }
+    > img {
+        transition: 0.6s ease;
+        width: 100%;
+        height: 25rem;
+        display: block;
+    }
+    &__desc {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        background-color: rgba($black, 0.5);
+        backdrop-filter: blur(25px);
+        padding: 1rem;
+
+        > h3 {
+            margin: 0;
+        }
+        > p {
+            margin-top: 0.5rem;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.half-con {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    @media screen and (max-width: $mobile-break) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+.third-con {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    @media screen and (max-width: $tablet-break) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: $mobile-break) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+.reading-width {
+    max-width: 36rem;
+}
+footer {
+    padding: 1rem 0 1rem 0;
+    background-color: lighten($black, 3);
+}
+.items-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1rem;
+    margin-top: -1rem;
+}
+.item {
+    text-decoration: none;
+    padding: 1rem;
+
+    color: $white;
+
+    margin-top: 0;
+
+    &[href] {
+        color: $accent;
+        transition: 0.6s ease;
+        &:hover {
+            opacity: 0.5;
+            transform: translateY(2px);
+            transition: 0.2s ease;
+            background-color: lighten($black, 9);
+            border-radius: 1rem;
+        }
+        &:active {
+            opacity: 0.25;
+            transform: translateY(4px);
+            transition: 0.2s ease;
+            background-color: lighten($black, 9);
+            border-radius: 1rem;
+        }
+    }
+}
+
+.video {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+
+    position: relative;
+    > iframe {
+        border: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+    }
+}
+pre {
+    width: 100%;
+    overflow-x: auto;
+    background-color: lighten($black, 10);
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+p > a {
+    transition: 0.6s ease;
+    &:hover {
+        opacity: 0.5;
+        transition: 0.2s ease;
+    }
+    &:active {
+        opacity: 0.25;
+        transition: 0.2s ease;
+    }
+}
